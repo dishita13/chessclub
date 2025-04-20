@@ -4,7 +4,7 @@ import './App.css'
 import { useRoutes } from 'react-router-dom'
 import ReadPosts from './pages/ReadPosts'
 import CreatePost from './pages/CreatePost.jsx'
-import EditPost from './pages/EditPost'
+// import EditPost from './pages/EditPost'
 
 function App() {
   // Sets up routes

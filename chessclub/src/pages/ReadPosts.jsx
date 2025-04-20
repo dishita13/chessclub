@@ -10,27 +10,32 @@ const ReadPosts = (props) => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        const fetchPost = async ()=>{
-            const {data} = await supabase
-            .from('chessclub')
-            .select()
-            .order('created_at', { ascending: false })
-
-            // set state of posts
-            setPosts(data);
-            console.log(data)
-        }
+        const fetchPost = async () => {
+            const { data, error } = await supabase
+              .from('chessclub')
+              .select()
+              .order('created_at', { ascending: false });
+          
+            if (error) {
+              console.error("Error fetching posts:", error);
+            } else {
+              console.log("Fetched posts:", data);
+              setPosts(data);
+            }
+          };
         fetchPost();
         // setPosts(props.data);
-    }, [props]);
+    }, []);
     
     return (
         <div className="ReadPosts">
             {
                 posts && posts.length > 0 ?
+                
                 posts.map((post,index) => 
-                   <Card id={post.id} title={post.title} caption={post.caption} image={post.image} bet={post.betCount}/>
-                ) : <h2>{'No Posts Yet 😞'}</h2>
+                   <Card id={post.id} title={post.title} caption={post.caption} image={post.image}/>
+                ) 
+                 : <h2>{'No Posts Yet 😞'}</h2>
             }
         </div>  
     )

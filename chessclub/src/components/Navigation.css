@@ -1,0 +1,23 @@
+/* Add hover effect for Nav.Link */
+.navbar .nav-link:hover {
+    position: relative;
+    z-index: 1;
+    /*TODO: fix this drop shadow on the links */
+    filter: drop-shadow(0 0 1em #025402);
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  
+  /* Add hover effect for NavDropdown items */
+  .navbar .dropdown-item:hover {
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 0 1em #025402);
+  }
+  
+  /* Add hover effect for the search button */
+  .navbar .btn-outline-success:hover {
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 0 4em #025402);
+  }

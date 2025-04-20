@@ -1,11 +1,13 @@
 input {
     margin-top: 10px;
-    width: 100%;
+    width: 75%;
     height: 45px;
     border-radius: 8px;
-    border: 1px solid transparent;
+    border: 1px solid;
     font-size: 20px;
     padding-left: 10px;
+    background-color: #ffffff;
+    color:black
 }
 
 label {
@@ -24,17 +26,18 @@ input[type=submit] {
     height: 50px;
     cursor: pointer;
     border-radius: 8px;
-    border: 1px solid transparent;
+    border: 1px solid ;
     font-size: 20px;
     font-weight: 500;
     font-family: inherit;
-    background-color: #1a1a1a;
-    color:white;
+    background-color: #ffffff;
+    color:rgb(0, 0, 0);
     cursor: pointer;
     transition: border-color 0.25s;
     margin-top: 20px;
   }
 
 input[type=submit]:hover {
-    border-color: #646cff;
+    filter: drop-shadow(0 0 2em #025402);
+    /* border-color: #646cff; */
 }

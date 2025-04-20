@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import './EditPost.css'
-// import { supabase } from '../client';
+import { supabase } from '../client';
 // import { useNavigate } from 'react-router-dom';
       
 const EditPost = (event) => {
