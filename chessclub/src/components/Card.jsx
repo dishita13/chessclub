@@ -28,14 +28,17 @@ const Card = (props) => {
         <img className="moreButton" alt="edit button" src={threedots} />
       </Link>
 
-      <h2 className="title">{props.title}</h2>
+      <Link to={'post/' + props.id}>
+        <b><h2 className="title">{props.title}</h2></b>
+      </Link>
+
       <p>{props.caption}</p>
 
       {props.image && (
         <img src={props.image} alt="Post image" className="card-img" />
       )}
 
-      {/* Uncomment this if you want a bet count button */}
+      {/* Uncomment this if you want an upvote count button */}
       {/* <button className="betButton" onClick={updateCount}>
         👍 Bet Count: {count}
       </button> */}

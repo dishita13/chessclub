@@ -52,7 +52,6 @@ const CreatePost = () => {
     if (error) {
       console.error('Post creation error:', error);
     } else {
-      alert('Post created!');
       setPost({ title: '', caption: '', image: '' });
     }
   };
